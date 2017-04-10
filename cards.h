@@ -46,28 +46,25 @@ private:
 
 
 class Hand {
-   public:
-      // A vector of Cards
-      Hand();
-
-      // You decide what functions you'll need...
-
-   private:
-      // You decide what fields you'll need...
+public:
+    Hand(); // A vector of Cards
+    
+    // Add fields
+    
+private:
+    // Add fields
 };
 
 
 class Player {
-   public:
-      // Constructor. 
-      //    Assigns initial amount of money
-      Player(int m);
+public:
+    Player(int m); //Assigns initial amount of money
 
-      // You decide what functions you'll need...
+      // Add fields
 
    private:
       int money;
-      // You decide what extra fields (if any) you'll need...
+      // Add fields (if any)
 };
 
 #endif
