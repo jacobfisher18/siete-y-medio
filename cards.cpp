@@ -188,3 +188,7 @@ void Hand::addCard(Card C) {
 Player::Player(int m){
     money = m;
 }
+
+int Player::get_money() const {
+    return money;
+}

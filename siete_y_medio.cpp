@@ -8,13 +8,16 @@
 using namespace std;
 
 // Global constants (if any)
+const int STARTING_MONEY = 100;
 // Non member functions declarations (if any)
 // Non member functions implementations (if any)
 
 // Stub for main
 int main(){
-    Card c = Card();
-    Hand h = Hand();
-    Player p = Player(50);
+    Player myPlayer = Player(STARTING_MONEY);
+    
+    while (myPlayer.get_money() > 0) {
+        
+    }
     return 0;
 }
