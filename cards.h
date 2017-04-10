@@ -44,6 +44,7 @@ public:
     Hand(); // A vector of Cards
     
     void addCard(Card c);
+    void printCards();
 private:
     vector<Card> cards;
 };

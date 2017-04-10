@@ -181,6 +181,14 @@ void Hand::addCard(Card C) {
     cards.push_back(C);
 }
 
+void Hand::printCards() {
+    for (int i = 0; i < cards.size(); i++) {
+        cout << "\t" << cards[i].get_spanish_rank() << " de " << cards[i].get_spanish_suit();
+        cout << " (" << cards[i].get_english_rank() << " of " << cards[i].get_english_suit() << ")" << endl;
+        
+    }
+}
+
 /* *************************************************
  Player class
  ************************************************* */
