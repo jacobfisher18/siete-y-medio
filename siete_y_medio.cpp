@@ -67,6 +67,30 @@ int main(){
         }
         
         //check for winner
+        if (playerHand.bust()) {
+            //just the player busted; dealer won
+        }
+        
+        else if (dealerHand.bust()) {
+            //dealer busted and player didn't; player won
+        }
+        
+        else if (playerHand.get_total() == dealerHand.get_total()) {
+            //tie
+        }
+        
+        else if (playerHand.get_total() < dealerHand.get_total()) {
+            //dealer outscored player; dealer won
+        }
+        
+        else if (playerHand.get_total() > dealerHand.get_total()) {
+            //player outscored dealer; player won
+        }
+        
+        else {
+            //error
+        }
+        
     }
     
     return 0;

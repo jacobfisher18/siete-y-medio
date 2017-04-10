@@ -50,6 +50,7 @@ public:
     void addCard(Card c);
     void printCards() const;
     double get_total() const;
+    bool bust() const; //returns true if the hand totals over 7.5
 private:
     vector<Card> cards;
 };
