@@ -3,6 +3,9 @@
 #include <iostream>
 #include <iomanip>
 #include <algorithm>
+#include <vector>
+
+using namespace std;
 
 /* Card Class */
 
@@ -169,9 +172,19 @@ bool Card::operator < (Card card2) const {
 /* *************************************************
  Hand class
  ************************************************* */
-// Implemente the member functions of the Hand class here.
+
+//default constructor
+Hand::Hand(){
+}
+
+void Hand::addCard(Card C) {
+    cards.push_back(C);
+}
 
 /* *************************************************
  Player class
  ************************************************* */
-// Implemente the member functions of the Player class here.
+
+Player::Player(int m){
+    money = m;
+}

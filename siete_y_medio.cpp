@@ -8,15 +8,13 @@
 using namespace std;
 
 // Global constants (if any)
-
-
 // Non member functions declarations (if any)
-
-
 // Non member functions implementations (if any)
-
 
 // Stub for main
 int main(){
+    Card c = Card();
+    Hand h = Hand();
+    Player p = Player(50);
     return 0;
 }
