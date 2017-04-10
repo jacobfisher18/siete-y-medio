@@ -26,18 +26,12 @@ public:
     // Accessors
     string get_spanish_suit() const;
     string get_spanish_rank() const;
-    
-    // Yet to Code
     string get_english_suit() const;
     string get_english_rank() const;
     
-    // Converts card rank to number. Possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
-    int get_rank() const;
+    int get_rank() const; // Converts card rank to number. Possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
     
-    // Compare rank of two cards. E.g: Eight<Jack is true.
-    // Assume Ace is always 1.
-    // Useful if you want to sort the cards.
-    bool operator < (Card card2) const;
+    bool operator < (Card card2) const; // Compare rank of two cards. E.g: Eight<Jack is true. Assume Ace is always 1.
     
 private:
     suit_t suit;
@@ -48,23 +42,16 @@ private:
 class Hand {
 public:
     Hand(); // A vector of Cards
-    
-    // Add fields
-    
 private:
-    // Add fields
+    vector<Card> cards;
 };
 
 
 class Player {
 public:
     Player(int m); //Assigns initial amount of money
-    
-    // Add fields
-    
 private:
     int money;
-    // Add fields (if any)
 };
 
 #endif
