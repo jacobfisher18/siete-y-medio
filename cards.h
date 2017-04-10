@@ -35,6 +35,8 @@ public:
     
     bool operator < (Card card2) const; // Compare rank of two cards. E.g: Eight<Jack is true. Assume Ace is always 1.
     
+    void print() const;
+    
 private:
     suit_t suit;
     rank_t rank;

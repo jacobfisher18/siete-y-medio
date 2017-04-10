@@ -179,6 +179,11 @@ bool Card::operator < (Card card2) const {
     return rank < card2.rank;
 }
 
+void Card::print() const {
+    cout << "\t" << get_spanish_rank() << " de " << get_spanish_suit();
+    cout << " (" << get_english_rank() << " of " << get_english_suit() << ")" << endl;
+}
+
 /* *************************************************
  Hand class
  ************************************************* */
@@ -193,9 +198,7 @@ void Hand::addCard(Card C) {
 
 void Hand::printCards() const {
     for (int i = 0; i < cards.size(); i++) {
-        cout << "\t" << cards[i].get_spanish_rank() << " de " << cards[i].get_spanish_suit();
-        cout << " (" << cards[i].get_english_rank() << " of " << cards[i].get_english_suit() << ")" << endl;
-        
+        cards[i].print();
     }
 }
 

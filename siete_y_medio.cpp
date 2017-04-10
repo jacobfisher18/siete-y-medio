@@ -32,6 +32,13 @@ int main(){
         string another;
         cout << "Your total is " << playerHand.get_total() << ". Do you want another card (y/n)? ";
         cin >> another;
+        
+        while (another == "y") {
+            Card newCard = Card();
+            playerHand.addCard(newCard); //draw a random card for the player
+            cout << "New card:" << endl;
+            newCard.print();
+        }
     }
     
     return 0;
