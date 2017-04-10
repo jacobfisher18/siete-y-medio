@@ -18,6 +18,5 @@ using namespace std;
 
 // Stub for main
 int main(){
-   /* --STATEMENTS-- */
-   return 0;
+    return 0;
 }

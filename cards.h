@@ -1,8 +1,8 @@
 /* *************************************
-   Ricardo Salazar, February 26, 2015
-
-   Interface of a simple Card class
-   ************************************* */
+ Ricardo Salazar, February 26, 2015
+ 
+ Interface of a simple Card class
+ ************************************* */
 
 #include <string>
 #include <vector>
@@ -33,12 +33,12 @@ public:
     
     // Converts card rank to number. Possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
     int get_rank() const;
-
+    
     // Compare rank of two cards. E.g: Eight<Jack is true.
     // Assume Ace is always 1.
     // Useful if you want to sort the cards.
     bool operator < (Card card2) const;
-
+    
 private:
     suit_t suit;
     rank_t rank;
@@ -59,12 +59,12 @@ private:
 class Player {
 public:
     Player(int m); //Assigns initial amount of money
-
-      // Add fields
-
-   private:
-      int money;
-      // Add fields (if any)
+    
+    // Add fields
+    
+private:
+    int money;
+    // Add fields (if any)
 };
 
 #endif
