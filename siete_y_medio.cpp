@@ -28,7 +28,10 @@ int main(){
         
         cout << "Your cards: " << endl;
         playerHand.printCards();
-        cout << endl;
+        
+        string another;
+        cout << "Your total is " << playerHand.get_total() << ". Do you want another card (y/n)? ";
+        cin >> another;
     }
     
     return 0;

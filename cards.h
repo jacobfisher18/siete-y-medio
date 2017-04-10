@@ -31,6 +31,8 @@ public:
     
     int get_rank() const; // Converts card rank to number. Possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
     
+    double get_value() const;
+    
     bool operator < (Card card2) const; // Compare rank of two cards. E.g: Eight<Jack is true. Assume Ace is always 1.
     
 private:
@@ -44,7 +46,8 @@ public:
     Hand(); // A vector of Cards
     
     void addCard(Card c);
-    void printCards();
+    void printCards() const;
+    double get_total() const;
 private:
     vector<Card> cards;
 };

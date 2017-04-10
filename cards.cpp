@@ -164,6 +164,16 @@ int Card::get_rank() const {
     return static_cast<int>(rank) + 1 ;
 }
 
+double Card::get_value() const {
+    int rank = get_rank();
+    if ((rank == 10) || (rank == 11) || (rank == 12)) {
+        return 0.5;
+    }
+    else {
+        return double(rank);
+    }
+}
+
 // Comparison operator for cards. Returns TRUE if card1 < card2
 bool Card::operator < (Card card2) const {
     return rank < card2.rank;
@@ -181,12 +191,20 @@ void Hand::addCard(Card C) {
     cards.push_back(C);
 }
 
-void Hand::printCards() {
+void Hand::printCards() const {
     for (int i = 0; i < cards.size(); i++) {
         cout << "\t" << cards[i].get_spanish_rank() << " de " << cards[i].get_spanish_suit();
         cout << " (" << cards[i].get_english_rank() << " of " << cards[i].get_english_suit() << ")" << endl;
         
     }
+}
+
+double Hand::get_total() const {
+    double total = 0;
+    for (int i = 0; i < cards.size(); i++) {
+        total += cards[i].get_value();
+    }
+    return total;
 }
 
 /* *************************************************
