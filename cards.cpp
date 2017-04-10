@@ -1,24 +1,16 @@
 #include "cards.h"
 #include <cstdlib>
 #include <iostream>
-
-/* 
-You might or might not need these two extra libraries 
 #include <iomanip>
 #include <algorithm>
-*/
 
 
-/* *************************************************
-   Card class
-   ************************************************* */
+/* Card Class */
 
-/* 
-   Default constructor for the Card class.
+/* Default constructor for the Card class.
    It could give repeated cards. This is OK.
    Most variations of Blackjack are played with 
-   several decks of cards at the same time.
-*/
+   several decks of cards at the same time. */
 Card::Card(){
    int r = 1 + rand() % 4;
    switch (r) {
@@ -105,21 +97,17 @@ string Card::get_spanish_rank() const {
    return rankName;
 }
 
-
-
-// Accessor: returns a string with the suit of the card in English 
-// This is just a stub! Modify it to your liking.
-string Card::get_english_suit() const { 
-   return "";
+// Accessor: returns a string with the suit of the card in English
+string Card::get_english_suit() const {
+    // Add code here
+    return "";
 }
 
-// Accessor: returns a string with the rank of the card in English 
-// This is just a stub! Modify it to your liking.
-string Card::get_english_rank() const { 
-   return "";
+// Accessor: returns a string with the rank of the card in English
+string Card::get_english_rank() const {
+    // Add code here
+    return "";
 }
-
-
 
 // Assigns a numerical value to card based on rank.
 // AS=1, DOS=2, ..., SIETE=7, SOTA=10, CABALLO=11, REY=12
@@ -133,17 +121,12 @@ bool Card::operator < (Card card2) const {
    return rank < card2.rank;
 }
 
-
-
 /* *************************************************
    Hand class
    ************************************************* */
 // Implemente the member functions of the Hand class here.
 
-
-
 /* *************************************************
    Player class
    ************************************************* */
 // Implemente the member functions of the Player class here.
-
