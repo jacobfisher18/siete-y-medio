@@ -38,7 +38,35 @@ int main(){
             playerHand.addCard(newCard); //draw a random card for the player
             cout << "New card:" << endl;
             newCard.print();
+            
+            cout << "Your cards: " << endl;
+            playerHand.printCards();
+            
+            cout << "Your total is " << playerHand.get_total() << ". Do you want another card (y/n)? ";
+            cin >> another;
         }
+        
+        Hand dealerHand = Hand();
+        dealerHand.addCard(Card()); //draw a random card for the dealer
+        
+        cout << "Dealer's cards: " << endl;
+        dealerHand.printCards();
+        
+        cout << "The dealer's total is " << dealerHand.get_total();
+        
+        while (dealerHand.get_total() < 5.5) {
+            Card newCard = Card();
+            dealerHand.addCard(newCard); //draw a random card for the dealer
+            cout << "New card:" << endl;
+            newCard.print();
+            
+            cout << "Dealer's cards: " << endl;
+            dealerHand.printCards();
+            
+            cout << "The dealer's total is " << dealerHand.get_total();
+        }
+        
+        //check for winner
     }
     
     return 0;
