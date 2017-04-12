@@ -211,8 +211,13 @@ double Hand::get_total() const {
 }
 
 bool Hand::bust() const {
-    //alert if bust
-    return true; //temp
+    if (get_total() > 7.5) {
+        return true;
+    }
+    
+    else {
+        return false;
+    }
 }
 
 /* *************************************************

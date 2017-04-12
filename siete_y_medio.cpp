@@ -66,35 +66,42 @@ int main(){
             cout << "The dealer's total is " << dealerHand.get_total() << endl;
         }
         
-        cout << playerHand.bust();
-        
-        /*
-        //check for winner
         if (playerHand.bust()) {
-            //just the player busted; dealer won
+            //the player busted; dealer won
+            cout << "Too bad. You lose $" << bet << endl;
+            myPlayer.lose(bet);
         }
         
         else if (dealerHand.bust()) {
             //dealer busted and player didn't; player won
+            cout << "Nice! You win $" << bet << endl;
+            myPlayer.gain(bet);
         }
         
         else if (playerHand.get_total() == dealerHand.get_total()) {
             //tie
+            cout << "Tie. You don't gain or lose any money." << endl;
         }
         
         else if (playerHand.get_total() < dealerHand.get_total()) {
             //dealer outscored player; dealer won
+            cout << "Too bad. You lose $" << bet << endl;
+            myPlayer.lose(bet);
         }
         
         else if (playerHand.get_total() > dealerHand.get_total()) {
             //player outscored dealer; player won
+            cout << "Nice! You win $" << bet << endl;
+            myPlayer.gain(bet);
         }
         
         else {
             //error
-        }*/
+            cout << "Error in programming logic!" << endl;
+            std::exit(0);
+        }
         
-        myPlayer.lose(100); //temporary, just for testing
+        //myPlayer.lose(100); //temporary, just for testing
     }
     
     return 0;
