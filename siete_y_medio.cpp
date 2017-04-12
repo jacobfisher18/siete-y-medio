@@ -16,8 +16,10 @@ const int STARTING_MONEY = 100;
 int main(){
     Player myPlayer = Player(STARTING_MONEY);
     
-    //keep going while the player still has money
-    while (myPlayer.get_money() > 0) {
+    string again = "y";
+    
+    //keep going while the player still has money and they reply "y" to keep playing
+    while ((myPlayer.get_money() > 0) && (again == "y")) {
         
         int bet;
         cout << "You have $" << myPlayer.get_money() << ". Enter bet: ";
@@ -101,7 +103,8 @@ int main(){
             std::exit(0);
         }
         
-        //myPlayer.lose(100); //temporary, just for testing
+        cout << "Play again (y/n)?";
+        cin >> again;
     }
     
     return 0;
