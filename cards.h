@@ -61,6 +61,8 @@ public:
     Player(int m); //Assigns initial amount of money
     
     int get_money() const; //returns the amount of money the player has
+    void gain(int money_to_gain);
+    void lose(const int money_to_lose);
 private:
     int money;
 };

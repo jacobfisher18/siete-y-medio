@@ -210,6 +210,11 @@ double Hand::get_total() const {
     return total;
 }
 
+bool Hand::bust() const {
+    //alert if bust
+    return true; //temp
+}
+
 /* *************************************************
  Player class
  ************************************************* */
@@ -220,4 +225,12 @@ Player::Player(int m){
 
 int Player::get_money() const {
     return money;
+}
+
+void Player::gain(int money_to_gain) {
+    money += money_to_gain;
+}
+
+void Player::lose(int money_to_lose) {
+    money -= money_to_lose;
 }

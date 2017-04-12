@@ -52,7 +52,7 @@ int main(){
         cout << "Dealer's cards: " << endl;
         dealerHand.printCards();
         
-        cout << "The dealer's total is " << dealerHand.get_total();
+        cout << "The dealer's total is " << dealerHand.get_total() << endl;
         
         while (dealerHand.get_total() < 5.5) {
             Card newCard = Card();
@@ -63,9 +63,12 @@ int main(){
             cout << "Dealer's cards: " << endl;
             dealerHand.printCards();
             
-            cout << "The dealer's total is " << dealerHand.get_total();
+            cout << "The dealer's total is " << dealerHand.get_total() << endl;
         }
         
+        cout << playerHand.bust();
+        
+        /*
         //check for winner
         if (playerHand.bust()) {
             //just the player busted; dealer won
@@ -89,8 +92,9 @@ int main(){
         
         else {
             //error
-        }
+        }*/
         
+        myPlayer.lose(100); //temporary, just for testing
     }
     
     return 0;
