@@ -7,11 +7,18 @@
 #include "cards.h"
 using namespace std;
 
-// Global constants
-const int STARTING_MONEY = 100;
+/*
+ Potential To-Do:
+ 1. End the game when the dealer has lost $900
+ 2. Input validation for betting amounts
+ 3. Write the companion log in gamelog.txt
+ 4. Improve the README
+ 5. Create an experimental branch and then merge it
+ */
 
-// Non member functions declarations (if any)
-// Non member functions implementations (if any)
+// Global constants
+const int STARTING_MONEY = 100; //amount of money with which the player starts
+const double DEALER_THRESHOLD = 5.5; //the total hand value at which the dealer will stop drawing another card
 
 int main(){
     Player myPlayer = Player(STARTING_MONEY);
@@ -56,7 +63,7 @@ int main(){
         
         cout << "The dealer's total is " << dealerHand.get_total() << endl;
         
-        while (dealerHand.get_total() < 5.5) {
+        while (dealerHand.get_total() < DEALER_THRESHOLD) {
             Card newCard = Card();
             dealerHand.addCard(newCard); //draw a random card for the dealer
             cout << "New card:" << endl;
