@@ -9,10 +9,7 @@ using namespace std;
 
 /* Card Class */
 
-/* Default constructor for the Card class.
- It could give repeated cards. This is OK.
- Most variations of Blackjack are played with
- several decks of cards at the same time. */
+//Default constructor can give repeated cards.
 Card::Card(){
     int r = 1 + rand() % 4;
     switch (r) {
@@ -39,7 +36,7 @@ Card::Card(){
     }
 }
 
-// Accessor: returns a string with the suit of the card in Spanish
+//Accessor: returns a string with the suit of the card in Spanish
 string Card::get_spanish_suit() const {
     string suitName;
     switch (suit) {
@@ -99,7 +96,7 @@ string Card::get_spanish_rank() const {
     return rankName;
 }
 
-// Accessor: returns a string with the suit of the card in English
+//Accessor: returns a string with the suit of the card in English
 string Card::get_english_suit() const {
     string suitName;
     switch (suit) {
@@ -120,7 +117,7 @@ string Card::get_english_suit() const {
     return suitName;
 }
 
-// Accessor: returns a string with the rank of the card in English
+//Accessor: returns a string with the rank of the card in English
 string Card::get_english_rank() const {
     string rankName;
     switch (rank) {
@@ -159,11 +156,12 @@ string Card::get_english_rank() const {
     return rankName;
 }
 
-// Assigns a numerical value to card based on rank. AS=1, DOS=2, REY=12
+//Assigns a numerical value to card based on rank. AS=1, DOS=2, REY=12
 int Card::get_rank() const {
     return static_cast<int>(rank) + 1 ;
 }
 
+//Returns the numerical value worth of a card
 double Card::get_value() const {
     int rank = get_rank();
     if ((rank == 10) || (rank == 11) || (rank == 12)) {
@@ -174,34 +172,32 @@ double Card::get_value() const {
     }
 }
 
-// Comparison operator for cards. Returns TRUE if card1 < card2
+//Comparison operator for cards. Returns TRUE if card1 < card2
 bool Card::operator < (Card card2) const {
     return rank < card2.rank;
 }
 
+//Prints a card's information in Spanish and English
 void Card::print() const {
     cout << "\t" << get_spanish_rank() << " de " << get_spanish_suit();
     cout << " (" << get_english_rank() << " of " << get_english_suit() << ")" << endl;
 }
 
-/* *************************************************
- Hand class
- ************************************************* */
+/* Hand class */
 
-//default constructor
-Hand::Hand(){
-}
-
+//Adds a new card to the hand
 void Hand::addCard(Card C) {
     cards.push_back(C);
 }
 
+//Prints the information of all cards in the hand
 void Hand::printCards() const {
     for (int i = 0; i < cards.size(); i++) {
         cards[i].print();
     }
 }
 
+//Returns the total combined value of all cards in the hand
 double Hand::get_total() const {
     double total = 0;
     for (int i = 0; i < cards.size(); i++) {
@@ -210,6 +206,7 @@ double Hand::get_total() const {
     return total;
 }
 
+//Returns true if the hand has busted (its value is over 7.5)
 bool Hand::bust() const {
     if (get_total() > 7.5) {
         return true;
@@ -220,22 +217,24 @@ bool Hand::bust() const {
     }
 }
 
-/* *************************************************
- Player class
- ************************************************* */
+/* Player class */
 
+//Constructor which assigns a given amount of money
 Player::Player(int m){
     money = m;
 }
 
+//Returns the amount of money the player has
 int Player::get_money() const {
     return money;
 }
 
+//Increases the player's money by a given amount
 void Player::gain(int money_to_gain) {
     money += money_to_gain;
 }
 
+//Decreases the player's money by a given amount
 void Player::lose(int money_to_lose) {
     money -= money_to_lose;
 }

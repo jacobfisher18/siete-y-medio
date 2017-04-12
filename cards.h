@@ -45,7 +45,7 @@ private:
 
 class Hand {
 public:
-    Hand(); // A vector of Cards
+    //default constructor automatically generated
     
     void addCard(Card c);
     void printCards() const;
