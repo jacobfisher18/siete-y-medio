@@ -11,9 +11,7 @@ using namespace std;
  Potential To-Do:
  1. End the game when the dealer has lost $900
  2. Input validation for betting amounts
- 3. Write the companion log in gamelog.txt
- 4. Improve the README
- 5. Create an experimental branch and then merge it
+ 3. Finish writing the companion log in gamelog.txt
  */
 
 // Global constants
