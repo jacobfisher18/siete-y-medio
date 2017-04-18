@@ -1,12 +1,12 @@
 # siete-y-medio
 An implementation of the famous card game in C++
 
-##Rules
+## Rules
 The goal of the game is to get cards whose total value comes the closest to 71/2 without going over it.
 Getting a card total over 71/2 is called "busting".
 The game is played with a 'Spanish baraja', a type of card deck.
 
-##Card Values
+## Card Values
 Name | Value
 --- | ---
 As | 1
