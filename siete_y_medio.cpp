@@ -110,6 +110,15 @@ int main(){
             std::exit(0);
         }
         
+        /* Here we will log the game to an external file */
+        
+        ofstream logfile;
+        logfile.open ("./gamelog.txt");
+        logfile << "Hello World";
+        logfile.close();
+        
+        /**************************************************/
+        
         cout << "Play again (y/n)?";
         cin >> again;
     }
